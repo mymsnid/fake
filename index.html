@@ -36,7 +36,13 @@
   //每隔1秒调用一次displayTime函数
   function start(){
     window.setInterval("displayTime()",1000)//单位是毫秒
-
+    var check_time=document.getElementById("check_time");
+    var city_time=document.getElementById("city_time");
+    var date = new Date();
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
+    check_time.innerHTML = month + "/" + day + " 2时";
+    city_time.innerHTML = month + "/" + day + " 4时";
   }
   var time = 60;
   function test() {
@@ -278,7 +284,7 @@
     <marquee style="width:80%;margin-left:4%;padding-top:1px;">👉场所码一定要扫吗？被赋黄码怎么办……四川疾控专家权威解答&emsp;👉疯狂星期四，V我50，只因你太美</marquee>
   </div>
   <div class="next">
-    <span class="bigword" style="margin-left:2px">王*</span>
+    <span class="bigword" style="margin-left:2px">王*平</span>
     <span class="twoic" style="margin-left:50%;"><i class="fa-sharp fa-solid fa-user-tie"></i></span>
     <span class="twoic" style="margin-left:10%"><i class="fa-solid fa-user-group"></i></span>
     <p class="grey" style="padding-top: 1%;">42***************54 &emsp; &nbsp;&nbsp;&nbsp; &emsp; 个人信息&emsp;家庭码</p>
@@ -305,7 +311,7 @@
     <div class="hesuan">
       <div class="tfhours">
         <p style="font-size:11px;color: #fff;padding-right: 25px;font-weight: bold;padding-top: 2px">省内24小时核酸： 阴性</p>
-        <p style="font-size:10px;color: #fff;padding-right: 90px;padding-top: 1px">13/32 25时</p>
+        <p id="check_time" style="font-size:10px;color: #fff;padding-right: 90px;padding-top: 1px">13/32 25时</p>
         <div class="refresh" id="showtime">点击更新</div>
 
       </div>
@@ -313,7 +319,7 @@
       <div class="travel">
 
         <p style="font-size:11px;color: #fff;padding-left: 10px;font-weight: bold;padding-top: 10px">风险城市旅居史</p>
-        <p style="font-size:10px;color: #fff;padding-left: 10px;padding-top: 1px">13/32 25时</p>
+        <p id="city_time" style="font-size:10px;color: #fff;padding-left: 10px;padding-top: 1px">13/32 25时</p>
 
         <!--                    <p style="font-size:4px;color: #fff;padding-left: 10px;padding-top: 3px">11/11 03时</p>-->
         <!--<p style="font-size: 35px;color: #307151;padding-left:110px">无</p>-->
